@@ -234,5 +234,8 @@ $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:0},
      }
 
  });
-
+ $(".down[data-toggle='collapse']").on('click', function() {
+    $(this).parent().children('.collapse').collapse('toggle');
+    $(this).parent().parent().siblings().find('.collapse.in').collapse('hide');
+});
 
