@@ -342,7 +342,9 @@
     background-image: -ms-linear-gradient( to right, var(--thirt-color) 0%, var(--sec-color) 51%, var(--main-color) 100%);
     background-image: linear-gradient( to right, var(--thirt-color) 0%, var(--sec-color) 51%, var(--main-color) 100%);
 }
-
+html[dir="ltr"] .side-logo{
+    text-align: center;
+}
 /*  scrolltop  */
 
 .scrolltop {
@@ -429,7 +431,12 @@
     -webkit-box-shadow: 6px 1px 14px rgba(0, 0, 0, .175);
     box-shadow: 6px 13px 14px rgba(0, 0, 0, .175);
 }
-
+html[dir="ltr"] .sidenav{text-align: left;}
+html[dir="ltr"] .down:after{left: unset;right: 35px;}
+html[dir="ltr"] .side-menu .sub_list li {
+    margin-right: 0;
+    margin-left: 25px;
+}
 .sidenav.open {
     right: 0;
 }
@@ -514,8 +521,7 @@
     margin-right: auto;
     margin-left: 45px;
 }
-html[dir="ltr"] .menu-head{margin-right: 45px;
-    margin-left: auto;}
+html[dir="ltr"] .menu-head{margin-right: 45px;   margin-left: auto;}
     html[dir="ltr"] .menu-head li {
         margin-right: 0;
         margin-left: 12px;
@@ -774,7 +780,7 @@ html[dir="ltr"] .slider-ti p{margin-right: auto;}
     -o-transition: 0.5s ease;
     transition: 0.5s ease;
 }
-
+html[dir="ltr"] .order-head a{margin-right: auto;}
 .order-head a:hover {
     color: #fff;
     background-position: right center;
@@ -1156,6 +1162,7 @@ html[dir="ltr"] .about-full-photo {
 .statistics-number span {
     font-size: 19px;
     color: var(--white-color);
+    text-transform: capitalize;
 }
 /* services */
 
@@ -1182,6 +1189,7 @@ html[dir="ltr"] .about-full-photo {
     background-color: var(--white-color);
     transform: translateX(50%);
 }
+html[dir="ltr"] .service-title h2::before{left: 0;}
 .service-title p{
     font-size: 15px;
     color: var(--white-color);
@@ -1236,6 +1244,7 @@ html[dir="ltr"] .about-full-photo {
     transition: 0.5s ease;
 
 }
+html[dir="ltr"] .ser-title h2 {font-size: 23px;}
 
 .ser-title i {
     color: var(--white-color);
@@ -1278,6 +1287,7 @@ html[dir="ltr"] .about-full-photo {
     background-color: var(--main-color);
     transform: translateX(50%);
 }
+html[dir="ltr"] .gallery-title h2::before{left: 0;}
 .gallery-title p{
     font-size: 15px;
     color: var(--grey-color);
@@ -1402,7 +1412,7 @@ html[dir="ltr"] .about-full-photo {
     background-color: var(--main-color);
     transform: translateX(50%);
 }
-
+html[dir="ltr"] .news-title h2::before{left: 0;}
 /* news-template-one  */
 .news-template-one-full{
     padding-top: 45px;
@@ -1550,7 +1560,13 @@ html[dir="ltr"] .about-full-photo {
     font-weight: bold;
     line-height: 1.7;
     margin-top: 5px;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+html[dir="ltr"] .news-two-content h3 {line-height: 1.2;}
 .news-two-content p{
     font-size: 15px;
     color: var(--contact-color);
@@ -1704,6 +1720,7 @@ padding-bottom: 40px;}
 .conatct-flex-title{display: flex;margin: 14px 20px;
     align-items: start;}
     .cont-icon{margin-left: 25px;}
+    html[dir="ltr"] .cont-icon{margin-left: 0;margin-right: 25px;}
     .cont-icon i{font-size: 18px;color: var(--white-color);
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1728,8 +1745,11 @@ padding-bottom: 40px;}
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
     }
+    html[dir="ltr"] .cont-icon .fa-phone {
+        transform: rotate(90deg);
+    }
     .cont-text h3{color: var(--sec-color);margin: 14px 20px;font-size: 16px;font-weight: bold;}
-    .cont-text span{font-size: 16px;color: var(--contact-color);}
+    .cont-text span{font-size: 16px;color: var(--contact-color);text-transform: capitalize;}
 /* End Contact Home Section */
 
 /* Footer */
@@ -1867,6 +1887,19 @@ footer {
     
         
     }
+    html[dir="ltr"] .photo-head-plus::after {
+        left: 146px;
+    }
+    html[dir="ltr"] .service-title h2 {
+        font-size: 23px;
+        padding: 0px 0px;
+        display: inline-flex;
+        min-width: 285px;
+        padding-left: 95px;
+    }
+    html[dir="ltr"] .news-title h2 {
+        padding-left: 85px;
+    }
     .side-slider-template-two-plus .owl-carousel .owl-nav .owl-prev,
     .side-slider-template-two-plus .owl-carousel .owl-nav .owl-next{
         display: none;
@@ -1909,7 +1942,19 @@ footer {
         .menu-head a {
             font-size: 17px;
         }
-    
+        html[dir="ltr"] .menu-head a {
+            font-size: 16px;
+        }
+        html[dir="ltr"] .slider-ti h2 {
+            font-size: 26px;
+        }
+        html[dir="ltr"] .about-home-name h1{right: 125px;
+            top: 24px;}
+            html[dir="ltr"] .ser-title{flex-wrap: wrap;
+                justify-content: center;}
+                html[dir="ltr"] .gallery-title h2::before {
+                    left: -70px;
+                }
         .menu-head {
             margin: auto;
         }
@@ -2093,6 +2138,14 @@ footer {
     .news-three {
         top: -95px;
     }
+    html[dir="ltr"] .gallery-title h2 {
+        padding-left: 0;
+        min-width: 120px;
+        margin-left: 39px;
+    }
+    html[dir="ltr"] .gallery-title h2::before {
+        left: -35px;
+    }
 }
 @media (max-width:480px) {
     .side-slider-template-two-plus {
@@ -2140,7 +2193,7 @@ footer {
     .about-home {
         padding: 0;
         padding-top: 26px;
-        padding-bottom: 70px;
+        padding-bottom: 130px;
     }
     .statistics-section-flex{flex-wrap: wrap;}
     .stati-icon{margin: auto;    width: 90px;
@@ -2307,6 +2360,50 @@ footer {
             .logo-tqnyat img {
                 width: 60px;
             }
+            html[dir="ltr"] .photo-head-plus::after {
+                right: -85px;
+            }
+            html[dir="ltr"] .slider-ti h2 {
+                font-size: 23px;
+            }
+            html[dir="ltr"] .slider-ti p{
+                margin-top: 15px;
+                margin-bottom: 23px;
+            }
+            html[dir="ltr"] .about-full-photo img {
+                height: 40vh;
+            }
+            html[dir="ltr"] .about-home-name h1 {
+                right: 33px;
+            }
+            html[dir="ltr"] .about-half-photo img {
+                margin: unset;
+                margin-top: 0px;
+            }
+            html[dir="ltr"] .service-title h2::after{    left: unset;
+                right: -15px;}
+                html[dir="ltr"] .gallery-title h2::before {
+                    left: unset;
+                }
+                html[dir="ltr"] .news-title h2::after {
+                  
+                    left: unset;
+                    right: -50px;}
+                    html[dir="ltr"]  .gallery-title h2{padding: 0;
+                        margin: 0;
+                        text-align: center;}
+                    html[dir="ltr"] .news-title h2 {
+                        padding: 0;
+                    }
+                    html[dir="ltr"] .news-title h2::before {
+                        left: -70px;
+                    }
+                    html[dir="ltr"] .news-title h2::after {
+                        right: -68px;
+                    }
+                    html[dir="ltr"] .copy-allright p {
+                        max-width: 280px;
+                    }
 }
 @media (max-width:425px) {
     .photo-head img {
@@ -2341,6 +2438,24 @@ footer {
                 padding: 0px 30px;
 
             }
+            html[dir="ltr"] .photo-head-plus::after {
+                right: -85px;
+                left: unset;
+            }
+            html[dir="ltr"] .about-home-name h1 {
+                right: 10px;
+           
+            }
+            html[dir="ltr"] .about-home {
+                padding-bottom: 135px;
+            }
+            html[dir="ltr"] .ser-title {
+                justify-content: space-between;
+            }
+            html[dir="ltr"] .news-item-two-image img {
+                height: 310px;
+            }
+            .about-half-photo{align-items: center;}
 }
 @media (max-width:375px) {
     .about-home-photo{grid-template-columns: unset;}
@@ -2424,6 +2539,9 @@ footer {
         width: 100px;
         height: 40px;
         font-size: 14px;
+    }
+    html[dir="ltr"] .photo-head-plus::after {
+        right: -32px;
     }
    
 }
