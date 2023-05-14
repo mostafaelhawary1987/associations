@@ -3114,4 +3114,188 @@ footer {
           padding-top: 0px;
       }
            }
-      
+           .gallery-grid{
+            display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 29px;
+           }
+           .gallery-grid .gallery-item{
+            border-radius: 25px;
+    overflow: hidden;
+           }
+           @media(max-width:991px) {
+            .gallery-grid {
+                         grid-template-columns: 1fr 1fr;}
+           }
+           @media(max-width:480px) {
+            .gallery-grid {
+                         grid-template-columns: 1fr;}
+           }
+           /* News Page */
+           .news-section{
+            padding-bottom: 60px;
+            display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 29px;
+           }
+           .news-section .news-item-one {
+            height: 510px;}
+            @media(max-width:991px) {
+                .news-section {
+                             grid-template-columns: 1fr 1fr;}
+               }
+               @media(max-width:480px) {
+                .news-section {
+                             grid-template-columns: 1fr;}
+                             .news-section .news-item-one {
+                                height: auto;
+                            }
+               }
+               /* new Page */
+               .new-section{
+                padding-bottom: 60px;
+                padding-top: 60px;
+               }
+               .new-one{
+                display: -ms-grid;
+                display: grid;
+                -ms-grid-columns: 2fr 1fr ;
+                grid-template-columns: 2fr 1fr ;
+                gap: 29px;
+               }
+               .new-one-img{
+                overflow: hidden;
+                border-radius: 10px;
+                padding: 35px 20px;
+                background-color: #F8F8F8;
+                text-align: center;
+                height: auto;
+                margin: auto;
+               }
+               .new-one-img .img-cont img {
+                height: 230px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .new-one-title h3 {
+                
+                font-size: 26px;
+                line-height: 1.73;
+                color: var(--text-color);
+               
+            }
+            .new-one-title h4 {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.79;
+                font-family: "tjMd";
+                color: var(--text-color);
+            }
+            .new-one-title p {
+                font-size: 17px;
+                line-height: 1.5;
+                color: var(--text-color);
+                font-family: "tjLight";
+            }
+
+            @media(max-width:991px) {
+            .new-one {
+             
+                -ms-grid-columns:  1fr;
+                grid-template-columns: 1fr;
+               
+            }
+        
+        }
+        @media(max-width:480px) {
+        .head-title h2 {
+           
+            font-size: 25px;}
+            .new-one-title h3 {
+                font-size: 23px;}
+                .new-section {
+                    padding-top: 30px;
+                }
+        }
+        /* Policies Page */
+        .police {
+            position: relative;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        .hvr-float {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0,0,0,0);
+            -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+        .hvr-float:active, .hvr-float:focus, .hvr-float:hover {
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+        }
+        .police img {
+            width: 100%;
+            height: 365px;
+        }
+        .police .police-text {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 100%;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            background-image: -moz-linear-gradient( 0deg, transparent 0%, hsl(0deg 0% 79.53% / 25%) 25%, var(--sec-color) 75%,var(--sec-color) 100%);
+            background-image: -webkit-linear-gradient( 0deg, transparent 0%, hsl(0deg 0% 79.53% / 25%) 25%, var(--sec-color) 75%,var(--sec-color) 100%);
+            background-image: -ms-linear-gradient( 0deg, transparent 0%, hsl(0deg 0% 79.53% / 25%) 25%, var(--sec-color) 75%,var(--sec-color) 100%);
+            background-image: linear-gradient( 0deg, transparent 0%, hsl(0deg 0% 79.53% / 25%) 25%, var(--sec-color) 75%,var(--sec-color) 100%);
+        }
+        .police .police-text h2 {
+            display: inline-block;
+            padding-top: 25px;
+            color: var(--white-color);
+            font-size: 25px;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+        .policies-section{
+            padding-top: 80px;
+        }
+        .police:hover .police-text h2{
+            color: var(--bread-color);
+          
+        } 
+        @media(max-width:991px) {
+        .police .police-text h2 {
+            padding-top: 30px;
+            font-size: 22px;
+        }}
+        @media(max-width:480px) {
+        .cent {
+           text-align: center;
+        }}
