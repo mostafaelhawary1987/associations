@@ -2641,7 +2641,7 @@ footer {
     padding-top: 90px;
     justify-content: center;
     cursor: pointer;
-    padding-right: 30%;
+    padding-right: 13%;
 }
 .tree-2{display: flex;
   justify-content: space-between;
@@ -2658,7 +2658,7 @@ footer {
   content: "";
   background: #efefef;
   height: 1px;
-  width: 855px;
+  width: 463px;
   position: absolute;
   right: 50%;
   top: 98px;
@@ -2699,12 +2699,12 @@ footer {
 }
 .chart.one{position: relative;}
 .chart.one::after {
-  content: "";
-  background: #efefef;
-  height: 1px;
-  width: 193px;
-  position: absolute;
-  left: -193px;
+    content: "";
+    background: #efefef;
+    height: 1px;
+    width: 218px;
+    position: absolute;
+    left: -216px;
 }
   .chart.one,.chart.two{
     display: flex;align-content: center;
