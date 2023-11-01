@@ -3096,6 +3096,18 @@ footer {
 
   .part-log .event-photo img{height: 169px;
     width: 169px;}
+
+    @media(max-width:425px) {  .part-log .event-photo img {
+        height: 140px;
+        width: 140px;
+    }}
+    @media(max-width:375px) {
+    .part-photo {
+    padding: 10px;
+    justify-content: center;
+
+}}
+
       /* Video Page */
       .video-sec{display: flex;flex-wrap: wrap;justify-content: start;padding-bottom: 50px;}
       .card-sound{    background-color: rgb(12 32 72 / 24%);
